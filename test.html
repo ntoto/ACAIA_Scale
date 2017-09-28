@@ -1,0 +1,16 @@
+<html lang="en">
+	<head>
+  		<title>Web Bluetooth</title>
+    	<script src="scale.js"></script>
+  	</head>
+
+  	<body>
+  		<script>
+			var sf = new ScaleFinder();
+			function discover() {
+	        	sf.startDiscovery();
+			}
+		</script>
+		<button onclick="discover()">Start</button>
+	</body>
+</html>
