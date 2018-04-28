@@ -330,16 +330,17 @@ var Scale = (function () {
             return false;
         }
 
+        var _this = this;
         this.characteristic.writeValue(encodeId())
         .then(function () {
         }, function (err) {
             console.log('write ident failed: ' + err);
-        });
-
-        this.characteristic.writeValue(encodeNotificationRequest())
-        .then(function () {
-        }, function (err) {
-            console.log('write failed: ' + err);
+        }).then(function() {
+            this.characteristic.writeValue(encodeNotificationRequest())
+            .then(function () {
+            }, function (err) {
+                console.log('write failed: ' + err);
+            });
         });
 
         return true;
