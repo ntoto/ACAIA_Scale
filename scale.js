@@ -336,7 +336,7 @@ var Scale = (function () {
         }, function (err) {
             console.log('write ident failed: ' + err);
         }).then(function() {
-            this.characteristic.writeValue(encodeNotificationRequest())
+            _this.characteristic.writeValue(encodeNotificationRequest())
             .then(function () {
             }, function (err) {
                 console.log('write failed: ' + err);
