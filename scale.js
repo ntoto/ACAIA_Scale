@@ -241,7 +241,7 @@ var Scale = (function () {
 
 	        if (msg.type === 5) {
 	            _this.weight = msg.value;
-	            console.log('weitgh: ' + msg.value);
+	            console.log('weight: ' + msg.value);
 	        }
 	        else {
 	            console.log('non-weight response');
@@ -336,7 +336,7 @@ var Scale = (function () {
         }, function (err) {
             console.log('write ident failed: ' + err);
         }).then(function() {
-            this.characteristic.writeValue(encodeNotificationRequest())
+            _this.characteristic.writeValue(encodeNotificationRequest())
             .then(function () {
             }, function (err) {
                 console.log('write failed: ' + err);
