@@ -241,7 +241,7 @@ var Scale = (function () {
 
 	        if (msg.type === 5) {
 	            _this.weight = msg.value;
-	            console.log('weitgh: ' + msg.value);
+	            console.log('weight: ' + msg.value);
 	        }
 	        else {
 	            console.log('non-weight response');
